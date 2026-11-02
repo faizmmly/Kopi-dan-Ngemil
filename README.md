@@ -11,7 +11,7 @@ Kopi dan Nyemil adalah aplikasi pemesanan kopi dan camilan. Pengguna dapat menda
 ## Fitur
 
 | No | Layar | Deskripsi | Status |
-|----|-------|-----------|---|
+|----|-------|-----------|--|
 | 1 | Splash / Welcome | Logo, nama aplikasi, tagline, tombol "Start now" | ✅ |
 | 2 | Sign Up | Pilihan Register atau Login | ✅ |
 | 3 | Login | Input username dan password dengan validasi | ✅ |
@@ -19,7 +19,7 @@ Kopi dan Nyemil adalah aplikasi pemesanan kopi dan camilan. Pengguna dapat menda
 | 5 | Home | Sapaan "Halo [Nama]", daftar menu (5 item), navigasi Home/Order/Profile | ✅ |
 | 6 | Profile | Ubah nama pengguna dan simpan | ✅ |
 | 7 | Alamat Pengiriman | Nama lengkap, alamat, patokan, tombol "Order dan Kirim" | ✅ |
-| 8 | Konfirmasi Pesanan | Pesan terima kasih dan tombol "Oke" kembali ke Home | ⬜ |
+| 8 | Konfirmasi Pesanan | Pesan terima kasih dan tombol "Oke" kembali ke Home | ✅ |
 
 ### Daftar Menu (Dummy Data)
 
