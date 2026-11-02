@@ -11,14 +11,14 @@ Kopi dan Nyemil adalah aplikasi pemesanan kopi dan camilan. Pengguna dapat menda
 ## Fitur
 
 | No | Layar | Deskripsi | Status |
-|----|-------|-----------|------|
+|----|-------|-----------|---|
 | 1 | Splash / Welcome | Logo, nama aplikasi, tagline, tombol "Start now" | ✅ |
 | 2 | Sign Up | Pilihan Register atau Login | ✅ |
 | 3 | Login | Input username dan password dengan validasi | ✅ |
 | 4 | Register | Input nama lengkap, username, password dengan validasi | ✅ |
-| 5 | Home | Sapaan "Halo [Nama]", daftar menu (5 item), navigasi Home/Order/Profile | ⬜ |
-| 6 | Profile | Ubah nama pengguna dan simpan | ⬜ |
-| 7 | Alamat Pengiriman | Nama lengkap, alamat, patokan, tombol "Order dan Kirim" | ⬜ |
+| 5 | Home | Sapaan "Halo [Nama]", daftar menu (5 item), navigasi Home/Order/Profile | ✅ |
+| 6 | Profile | Ubah nama pengguna dan simpan | ✅ |
+| 7 | Alamat Pengiriman | Nama lengkap, alamat, patokan, tombol "Order dan Kirim" | ✅ |
 | 8 | Konfirmasi Pesanan | Pesan terima kasih dan tombol "Oke" kembali ke Home | ⬜ |
 
 ### Daftar Menu (Dummy Data)
@@ -74,5 +74,5 @@ Splash → Sign Up → Register / Login → Home → Order (Alamat) → Konfirma
 ## Identitas
 
 - **Nama**: Faiz Muhammad Ilham
-- **NIM**: (isi NIM)
-- **Mata Kuliah**: Pemrograman Mobile
+- **NIM**: 1247050032
+- **Mata Kuliah**: Pengembangan Aplikasi Mobile
