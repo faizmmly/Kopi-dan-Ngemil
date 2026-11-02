@@ -1,20 +1,36 @@
 package lat.pam.kopidannyemil
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import lat.pam.kopidannyemil.adapter.MenuAdapter
+import lat.pam.kopidannyemil.data.DummyData
+import lat.pam.kopidannyemil.data.UserSession
+import lat.pam.kopidannyemil.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_home)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.rvMenu.layoutManager = LinearLayoutManager(this)
+        binding.rvMenu.adapter = MenuAdapter(DummyData.menuList)
+
+        binding.tabOrder.setOnClickListener {
+            startActivity(Intent(this, AddressActivity::class.java))
         }
+        binding.tabProfile.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.tvGreeting.text = "Halo ${UserSession.fullName},"
     }
 }
