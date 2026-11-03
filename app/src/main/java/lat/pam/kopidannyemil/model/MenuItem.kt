@@ -4,5 +4,6 @@ data class MenuItem (
     val name: String,
     val description: String,
     val price: Int,
-    val imageRes: Int
+    val imageRes: Int,
+    val category: String
 )

@@ -2,8 +2,11 @@ package lat.pam.kopidannyemil
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.animation.OvershootInterpolator
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import lat.pam.kopidannyemil.data.Cart
+import lat.pam.kopidannyemil.data.LastOrder
 import lat.pam.kopidannyemil.data.UserSession
 import lat.pam.kopidannyemil.databinding.ActivityConfirmationBinding
 
@@ -17,6 +20,21 @@ class ConfirmationActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tvGreeting.text = "Halo ${UserSession.fullName},"
+        binding.tvOrderNo.text = LastOrder.number
+        binding.tvPayment.text = LastOrder.payment
+        binding.tvTotal.text = Cart.formatRupiah(LastOrder.total)
+        binding.tvAddress.text = LastOrder.address
+
+        Cart.clear()
+
+        binding.okCircle.apply {
+            scaleX = 0f
+            scaleY = 0f
+            animate().scaleX(1f).scaleY(1f)
+                .setDuration(600)
+                .setInterpolator(OvershootInterpolator())
+                .start()
+        }
 
         binding.btnOke.setOnClickListener { backToHome() }
 

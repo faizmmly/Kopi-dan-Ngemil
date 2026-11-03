@@ -2,24 +2,31 @@
 
 > Get a taste of your wish
 
-Aplikasi mobile Android untuk memesan kopi dan makanan ringan, dibuat sebagai tugas mata kuliah **Pemrograman Mobile** berdasarkan wireframe "Kopi dan Nyemil".
+Aplikasi mobile Android untuk memesan kopi dan makanan ringan, dibuat sebagai tugas mata kuliah **Pengembangan Aplikasi Mobile** berdasarkan wireframe "Kopi dan Nyemil".
 
 ## Deskripsi Aplikasi
 
 Kopi dan Nyemil adalah aplikasi pemesanan kopi dan camilan. Pengguna dapat mendaftar atau masuk, melihat daftar menu makanan dan minuman, mengubah nama profil, mengisi alamat pengiriman, lalu mengonfirmasi pesanan. Aplikasi tidak memakai database; data menu berupa data statis (dummy data) dan data pengguna disimpan sementara di memori selama aplikasi berjalan.
 
-## Fitur
-
 | No | Layar | Deskripsi | Status |
-|----|-------|-----------|--|
-| 1 | Splash / Welcome | Logo, nama aplikasi, tagline, tombol "Start now" | ✅ |
-| 2 | Sign Up | Pilihan Register atau Login | ✅ |
-| 3 | Login | Input username dan password dengan validasi | ✅ |
-| 4 | Register | Input nama lengkap, username, password dengan validasi | ✅ |
-| 5 | Home | Sapaan "Halo [Nama]", daftar menu (5 item), navigasi Home/Order/Profile | ✅ |
+|----|-------|-----------|--------|
+| 1 | Splash / Welcome | Logo cangkir, animasi masuk, tagline, tombol "Start now" | ✅ |
+| 2 | Sign Up | Pilihan Register atau Login dengan kartu keunggulan | ✅ |
+| 3 | Login | Input username dan password, validasi, tampilkan/sembunyikan password | ✅ |
+| 4 | Register | Nama lengkap, username, password, konfirmasi password dengan validasi | ✅ |
+| 5 | Home | Sapaan nama depan, banner, pencarian, kategori, daftar 5 menu, tombol tambah ke keranjang | ✅ |
 | 6 | Profile | Ubah nama pengguna dan simpan | ✅ |
-| 7 | Alamat Pengiriman | Nama lengkap, alamat, patokan, tombol "Order dan Kirim" | ✅ |
-| 8 | Konfirmasi Pesanan | Pesan terima kasih dan tombol "Oke" kembali ke Home | ✅ |
+| 7 | Alamat Pengiriman (Order) | Ringkasan pesanan, subtotal, ongkir, form alamat, metode pembayaran | ✅ |
+| 8 | Konfirmasi Pesanan | Nomor pesanan, pembayaran, total, alamat, tombol "Oke" ke Home | ✅ |
+
+### Fitur Tambahan
+
+- Pencarian menu secara langsung
+- Filter kategori (Semua, Minuman, Makanan)
+- Keranjang dengan pengatur jumlah (− / +) dan bar total harga
+- Pilihan metode pembayaran (COD, QRIS, Transfer bank)
+- Akun tersimpan di perangkat dengan SharedPreferences
+- Animasi Splash dan transisi antar layar
 
 ### Daftar Menu (Dummy Data)
 
@@ -48,6 +55,8 @@ Splash → Sign Up → Register / Login → Home → Order (Alamat) → Konfirma
 - **Material Components**
 - **Min SDK**: API 27 (Android 8.1)
 - **Penyimpanan data**: dummy data & `object` di memori (tanpa database)
+- **SharedPreferences** untuk menyimpan akun pengguna
+- **ShapeableImageView** dan drawable vector untuk tampilan
 
 ## Cara Menjalankan Aplikasi
 
@@ -76,3 +85,4 @@ Splash → Sign Up → Register / Login → Home → Order (Alamat) → Konfirma
 - **Nama**: Faiz Muhammad Ilham
 - **NIM**: 1247050032
 - **Mata Kuliah**: Pengembangan Aplikasi Mobile
+- **Dosen Pengampu**: H.,Aldy Rialdy Atmadja,M.T 
