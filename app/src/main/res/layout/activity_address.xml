@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="Alamat"
                 android:textColor="@color/black"
-                android:textSize="32sp"
+                android:textSize="27sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -36,7 +36,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Cek pesanan dan isi data pengiriman"
                 android:textColor="@color/gray_text"
-                android:textSize="15sp" />
+                android:textSize="14sp" />
 
             <!-- Keranjang kosong -->
             <LinearLayout
@@ -54,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="🛒"
-                    android:textSize="40sp" />
+                    android:textSize="39sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
                     android:layout_marginTop="8dp"
                     android:text="Keranjang masih kosong"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -72,7 +72,7 @@
                     android:gravity="center"
                     android:text="Pilih menu favoritmu dulu di halaman Home"
                     android:textColor="@color/gray_text"
-                    android:textSize="13sp" />
+                    android:textSize="11sp" />
             </LinearLayout>
 
             <!-- Form + ringkasan, tampil jika keranjang berisi -->
@@ -95,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:text="Ringkasan Pesanan"
                         android:textColor="@color/black"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -162,7 +162,7 @@
                             android:layout_weight="1"
                             android:text="Total"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -170,7 +170,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/brown"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
@@ -255,7 +255,7 @@
                     android:layout_marginTop="24dp"
                     android:text="Metode Pembayaran"
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -293,7 +293,7 @@
                         android:paddingStart="8dp"
                         android:paddingTop="6dp"
                         android:paddingBottom="6dp"
-                        android:textSize="15sp"
+                        android:textSize="13sp"
                         android:textColor="@color/black" />
                 </RadioGroup>
             </LinearLayout>
@@ -316,7 +316,7 @@
                 android:text="Order dan Kirim"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>

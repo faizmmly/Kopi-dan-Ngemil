@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:text="Halo Nama,"
                 android:textColor="@color/black"
-                android:textSize="28sp"
+                android:textSize="27sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -37,7 +37,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Profile Saya"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -46,7 +46,7 @@
                 android:layout_marginTop="4dp"
                 android:text="Profile Setting"
                 android:textColor="@color/gray_text"
-                android:textSize="14sp" />
+                android:textSize="13sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilName"
@@ -90,7 +90,7 @@
                 android:text="Save"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>

@@ -43,7 +43,7 @@
                             android:layout_height="wrap_content"
                             android:text="Selamat datang"
                             android:textColor="@color/gray_text"
-                            android:textSize="14sp" />
+                            android:textSize="13sp" />
 
                         <TextView
                             android:id="@+id/tvGreeting"
@@ -51,7 +51,7 @@
                             android:layout_height="wrap_content"
                             android:text="Halo Nama,"
                             android:textColor="@color/black"
-                            android:textSize="26sp"
+                            android:textSize="21sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -63,7 +63,7 @@
                         android:gravity="center"
                         android:text="N"
                         android:textColor="@color/brown"
-                        android:textSize="20sp"
+                        android:textSize="19sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -87,7 +87,7 @@
                             android:layout_height="wrap_content"
                             android:text="Get a taste of your wish"
                             android:textColor="@color/white"
-                            android:textSize="17sp"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -96,7 +96,7 @@
                             android:layout_marginTop="4dp"
                             android:text="Pilih kopi dan camilan favoritmu, kurir kami siap mengantar."
                             android:textColor="@color/cream"
-                            android:textSize="13sp" />
+                            android:textSize="11sp" />
                     </LinearLayout>
 
                     <TextView
@@ -104,7 +104,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:text="☕"
-                        android:textSize="38sp" />
+                        android:textSize="31sp" />
                 </LinearLayout>
 
                 <EditText
@@ -121,7 +121,7 @@
                     android:paddingEnd="16dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray_text"
-                    android:textSize="15sp" />
+                    android:textSize="13sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -175,7 +175,7 @@
                     android:layout_marginBottom="12dp"
                     android:text="Menu Favorit"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -217,7 +217,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -225,7 +225,7 @@
                 android:layout_height="wrap_content"
                 android:text="Lihat pesanan  ›"
                 android:textColor="@color/cream"
-                android:textSize="14sp" />
+                android:textSize="13sp" />
         </LinearLayout>
     </FrameLayout>
 

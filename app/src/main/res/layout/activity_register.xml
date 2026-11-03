@@ -22,7 +22,7 @@
             android:layout_marginTop="64dp"
             android:text="Register"
             android:textColor="@color/black"
-            android:textSize="32sp"
+            android:textSize="31sp"
             android:textStyle="bold" />
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_marginTop="8dp"
             android:text="Buat akun baru dan nikmati menu favoritmu"
             android:textColor="@color/gray_text"
-            android:textSize="15sp" />
+            android:textSize="14sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilFullName"
@@ -141,7 +141,7 @@
             android:padding="4dp"
             android:text="Sudah punya akun? Login"
             android:textColor="@color/brown"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:textStyle="bold" />
 
         <View
@@ -162,7 +162,7 @@
             android:text="Register"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
     </LinearLayout>
 </ScrollView>

@@ -38,7 +38,7 @@
             android:layout_marginTop="24dp"
             android:text="Sign up"
             android:textColor="@color/black"
-            android:textSize="34sp"
+            android:textSize="33sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/logoCircle" />
@@ -51,7 +51,7 @@
             android:lineSpacingExtra="4dp"
             android:text="Join as a member &amp; experience more fun from various meal at mesen_gube marketing app"
             android:textColor="@color/gray_text"
-            android:textSize="15sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvTitle" />
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:text="☕  Menu kopi dan camilan pilihan"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="13sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,7 +81,7 @@
                 android:layout_marginTop="14dp"
                 android:text="⚡  Pesan cepat, tinggal beberapa ketukan"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="13sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
                 android:layout_marginTop="14dp"
                 android:text="🛵  Diantar langsung ke alamatmu"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="13sp" />
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -105,7 +105,7 @@
             android:text="Register"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/btnLogin"
             app:layout_constraintEnd_toEndOf="parent"
@@ -123,7 +123,7 @@
             android:text="Login"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
