@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.OvershootInterpolator
 import androidx.appcompat.app.AppCompatActivity
+import lat.pam.kopidannyemil.data.UserSession
 import lat.pam.kopidannyemil.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
@@ -16,15 +17,22 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnStart.pressEffect()
         playIntro()
 
         binding.btnStart.setOnClickListener {
-            startActivity(Intent(this, SignUpActivity::class.java))
+            val loggedIn = UserSession.isLoggedIn
+            val target = if (loggedIn) HomeActivity::class.java
+            else SignUpActivity::class.java
+            val intent = Intent(this, target)
+            if (loggedIn) {
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+            startActivity(intent)
         }
     }
 
     private fun playIntro() {
-        // Logo: membesar dengan efek memantul
         binding.logoCircle.apply {
             alpha = 0f
             scaleX = 0.4f
@@ -35,10 +43,10 @@ class SplashActivity : AppCompatActivity() {
                 .start()
         }
 
-        // Teks dan tombol: naik sambil muncul, berurutan
         slideUp(binding.tvAppName, 400)
         slideUp(binding.tvTagline, 600)
         slideUp(binding.btnStart, 800)
+        slideUp(binding.tvVersion, 1000)
     }
 
     private fun slideUp(view: View, delay: Long) {

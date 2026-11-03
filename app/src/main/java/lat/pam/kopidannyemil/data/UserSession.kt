@@ -28,4 +28,8 @@ object UserSession {
         set(value) = prefs.edit().putString("password", value).apply()
 
     fun isRegistered(): Boolean = username.isNotEmpty()
+
+    var isLoggedIn: Boolean
+        get() = prefs.getBoolean("loggedIn", false)
+        set(value) = prefs.edit().putBoolean("loggedIn", value).apply()
 }

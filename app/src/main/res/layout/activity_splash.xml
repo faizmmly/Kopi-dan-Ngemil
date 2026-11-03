@@ -62,11 +62,24 @@
         android:minHeight="0dp"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
+        android:layout_marginBottom="24dp"
         android:text="Start now"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="v1.0"
+        android:textColor="@color/gray_text"
+        android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
