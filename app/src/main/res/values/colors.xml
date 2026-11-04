@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#1A1A1A</color>
+    <color name="primary">#0F5132</color>
+    <color name="ink">#1C2B24</color>
+
+    <color name="black">#1C2B24</color>
     <color name="white">#FFFFFF</color>
-    <color name="background">#F8F8F8</color>
-    <color name="cream">#FDEBD8</color>
-    <color name="orange_light">#FFF3E8</color>
-    <color name="orange_border">#F8D9B8</color>
-    <color name="brown">#B45309</color>
-    <color name="green_ok">#B7F0CF</color>
-    <color name="green_ok_text">#0F7A3E</color>
-    <color name="gray_text">#6B6B6B</color>
-    <color name="gray_border">#CFCFCF</color>
+    <color name="background">#F4F4F2</color>
+
+    <color name="cream">#F3E4CF</color>
+    <color name="caramel">#D4A373</color>
+    <color name="orange_light">#FFFFFF</color>
+    <color name="orange_border">#EAE6DD</color>
+    <color name="field">#ECECE8</color>
+
+    <color name="brown">#B7791F</color>
+
+    <color name="green_ok">#CDEBD9</color>
+    <color name="green_ok_text">#0F5132</color>
+    <color name="gray_text">#6B7280</color>
+    <color name="gray_border">#E3E1DA</color>
 </resources>
