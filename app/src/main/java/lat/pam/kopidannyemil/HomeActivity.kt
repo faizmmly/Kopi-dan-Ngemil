@@ -25,7 +25,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         adapter = MenuAdapter(DummyData.menuList) { updateCartBar() }
-        binding.rvMenu.layoutManager = LinearLayoutManager(this)
+        binding.rvMenu.layoutManager = androidx.recyclerview.widget.GridLayoutManager(this, 2)
         binding.rvMenu.adapter = adapter
 
         binding.etSearch.doOnTextChanged { _, _, _, _ -> applyFilter() }

@@ -5,10 +5,10 @@ import lat.pam.kopidannyemil.model.MenuItem
 
 object DummyData {
     val menuList = listOf(
-        MenuItem("Kopi Susu Gula Aren", "Espresso, susu, gula aren", 22000, R.drawable.kopi_susu_aren, "Minuman"),
-        MenuItem("Donat Cokelat", "Donat empuk, glaze cokelat", 12000, R.drawable.donat, "Makanan"),
-        MenuItem("Sourdough Loaf", "Roti fermentasi alami", 35000, R.drawable.sourdough, "Makanan"),
-        MenuItem("Cappuccino", "Espresso, foam susu lembut", 25000, R.drawable.cappuccino, "Minuman"),
-        MenuItem("Matcha Latte", "Matcha Jepang, susu segar", 27000, R.drawable.matcha, "Minuman")
+        MenuItem("Kopi Susu Gula Aren", "Espresso, susu, gula aren", 22000, R.drawable.kopi_susu_aren, "Minuman", 4.8),
+        MenuItem("Donat Cokelat", "Donat empuk, glaze cokelat", 12000, R.drawable.donat, "Makanan", 4.6),
+        MenuItem("Sourdough Loaf", "Roti fermentasi alami", 35000, R.drawable.sourdough, "Makanan", 4.5),
+        MenuItem("Cappuccino", "Espresso, foam susu lembut", 25000, R.drawable.cappuccino, "Minuman", 4.9),
+        MenuItem("Matcha Latte", "Matcha Jepang, susu segar", 27000, R.drawable.matcha, "Minuman", 4.7)
     )
 }

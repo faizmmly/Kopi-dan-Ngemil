@@ -38,6 +38,7 @@ class MenuAdapter(
         b.ivMenu.setImageResource(item.imageRes)
         b.tvName.text = item.name
         b.tvDesc.text = item.description
+        b.tvRating.text = "★ ${item.rating}"
         b.tvPrice.text = Cart.formatRupiah(item.price)
 
         b.btnAdd.visibility = if (qty == 0) View.VISIBLE else View.GONE
