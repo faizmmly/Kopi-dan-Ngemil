@@ -32,4 +32,10 @@ object UserSession {
     var isLoggedIn: Boolean
         get() = prefs.getBoolean("loggedIn", false)
         set(value) = prefs.edit().putBoolean("loggedIn", value).apply()
+
+    fun logout() {
+        prefs.edit().putBoolean("loggedIn", false).apply()
+        // Jika ingin menghapus semua data sesi termasuk username/password, gunakan:
+        // prefs.edit().clear().apply()
+    }
 }

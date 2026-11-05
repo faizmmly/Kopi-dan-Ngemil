@@ -21,14 +21,13 @@ class SplashActivity : AppCompatActivity() {
         playIntro()
 
         binding.btnStart.setOnClickListener {
-            val loggedIn = UserSession.isLoggedIn
-            val target = if (loggedIn) HomeActivity::class.java
-            else SignUpActivity::class.java
-            val intent = Intent(this, target)
-            if (loggedIn) {
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            }
+
+            UserSession.logout()
+
+            val intent = Intent(this, SignUpActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
+            finish()
         }
     }
 

@@ -38,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
+        // PERBAIKAN: Ditambah tanda seru (!) di depan UserSession
         if (!UserSession.isRegistered()) {
             binding.tilUsername.error = "Akun belum terdaftar, silakan register dulu"
             return
@@ -48,10 +49,12 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
+        // Set status login menjadi true setelah berhasil verifikasi
         UserSession.isLoggedIn = true
 
         val intent = Intent(this, HomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
+        finish()
     }
 }
