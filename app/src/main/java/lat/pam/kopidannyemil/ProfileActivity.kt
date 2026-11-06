@@ -59,9 +59,10 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun showUser() {
-        val name = UserSession.fullName
-        binding.tvGreeting.text = "Halo $name,"
-        binding.tvAvatarBig.text = name.trim().take(1).uppercase()
+        val fullName = UserSession.fullName
+        val firstName = fullName.trim().split(" ").firstOrNull().orEmpty()
+        binding.tvGreeting.text = "Halo $firstName,"
+        binding.tvAvatarBig.text = firstName.trim().take(1).uppercase()
         binding.tvUsername.text = "@${UserSession.username}"
     }
 

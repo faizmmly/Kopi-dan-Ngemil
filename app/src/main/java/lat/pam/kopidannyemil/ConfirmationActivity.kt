@@ -19,7 +19,9 @@ class ConfirmationActivity : AppCompatActivity() {
         binding = ActivityConfirmationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvGreeting.text = "Halo ${UserSession.fullName},"
+        val firstName = UserSession.fullName.trim().split(" ").firstOrNull().orEmpty()
+        binding.tvGreeting.text = "Halo $firstName,"
+
         binding.tvOrderNo.text = LastOrder.number
         binding.tvPayment.text = LastOrder.payment
         binding.tvTotal.text = Cart.formatRupiah(LastOrder.total)
@@ -36,7 +38,7 @@ class ConfirmationActivity : AppCompatActivity() {
                 .start()
         }
 
-        binding.btnOke.setOnClickListener { backToHome() }
+        binding.btnOke.pressEffect()
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -45,7 +47,11 @@ class ConfirmationActivity : AppCompatActivity() {
         })
     }
 
+    private var leaving = false
+
     private fun backToHome() {
+        if (leaving) return
+        leaving = true
         val intent = Intent(this, HomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
