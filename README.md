@@ -2,31 +2,36 @@
 
 > Get a taste of your wish
 
-Aplikasi mobile Android untuk memesan kopi dan makanan ringan, dibuat sebagai tugas mata kuliah **Pengembangan Aplikasi Mobile** berdasarkan wireframe "Kopi dan Nyemil".
+![Kotlin](https://img.shields.io/badge/Kotlin-Android-green) ![Min SDK](https://img.shields.io/badge/Min%20SDK-27-blue)
+
+
+Aplikasi mobile Android untuk memesan kopi dan makanan ringan, dibuat sebagai tugas UTS mata kuliah **Pengembangan Aplikasi Mobile** berdasarkan wireframe "Kopi dan Nyemil".
 
 ## Deskripsi Aplikasi
 
-Kopi dan Nyemil adalah aplikasi pemesanan kopi dan camilan. Pengguna dapat mendaftar atau masuk, melihat daftar menu makanan dan minuman, mengubah nama profil, mengisi alamat pengiriman, lalu mengonfirmasi pesanan. Aplikasi tidak memakai database; data menu berupa data statis (dummy data) dan data pengguna disimpan sementara di memori selama aplikasi berjalan.
+Kopi dan Nyemil adalah aplikasi pemesanan kopi dan camilan. Pengguna dapat mendaftar atau masuk, melihat daftar menu makanan dan minuman, menambahkan menu ke keranjang,  menambahkan menu ke keranjang, mengisi alamat pengiriman, memilih metode pembayaran, lalu menerima konfirmasi pesanan. Aplikasi **tidak memakai database**: data menu berupa data statis (dummy data) dan data akun disimpan di perangkat dengan SharedPreferences.
 
 | No | Layar | Deskripsi                                                                                 | Status |
 |----|-------|-------------------------------------------------------------------------------------------|--------|
-| 1 | Splash / Welcome | Logo cangkir, animasi masuk, tagline, tombol "Start now"                                  | ✅ |
-| 2 | Sign Up | Pilihan Register atau Login dengan kartu keunggulan                                       | ✅ |
-| 3 | Login | Input username dan password, validasi, tampilkan/sembunyikan password                     | ✅ |
-| 4 | Register | Nama lengkap, username, password, konfirmasi password dengan validasi                     | ✅ |
-| 5 | Home | Sapaan nama depan, banner, pencarian, kategori, daftar 8 menu, tombol tambah ke keranjang | ✅ |
-| 6 | Profile | Ubah nama pengguna dan simpan                                                             | ✅ |
-| 7 | Alamat Pengiriman (Order) | Ringkasan pesanan, subtotal, ongkir, form alamat, metode pembayaran                       | ✅ |
-| 8 | Konfirmasi Pesanan | Nomor pesanan, pembayaran, total, alamat, tombol "Oke" ke Home                            | ✅ |
+| 1 | Splash / Welcome | Logo cangkir, animasi masuk, tagline, tombol "Start now" | ✅ |
+| 2 | Sign Up | Pilihan Register atau Login dengan kartu keunggulan | ✅ |
+| 3 | Login | Input username dan password, validasi, tampilkan/sembunyikan password | ✅ |
+| 4 | Register | Nama lengkap, username, password, konfirmasi password dengan validasi | ✅ |
+| 5 | Home | Sapaan nama depan, banner, pencarian, kategori, daftar menu, tombol tambah ke keranjang | ✅ |
+| 6 | Profile | Ubah nama, simpan, dan keluar dari akun | ✅ |
+| 7 | Alamat Pengiriman (Order) | Ringkasan pesanan, ongkir, form alamat, metode pembayaran | ✅ |
+| 8 | Konfirmasi Pesanan | Nomor pesanan, pembayaran, total, alamat, tombol "Oke" ke Home | ✅ |
 
-### Fitur Tambahan
+### Pengembangan dari Wireframe
+
+Alur dan 8 layar sesuai wireframe. Tampilan dikembangkan (tema hijau-krem, font Poppins, grid menu dengan foto dan rating) dengan fitur tambahan:
 
 - Pencarian menu secara langsung
 - Filter kategori (Semua, Minuman, Makanan)
 - Keranjang dengan pengatur jumlah (− / +) dan bar total harga
 - Pilihan metode pembayaran (COD, QRIS, Transfer bank)
-- Akun tersimpan di perangkat dengan SharedPreferences
-- Animasi Splash dan transisi antar layar
+- Logout dengan dialog konfirmasi
+- Animasi Splash, transisi antar layar, dan efek tekan tombol
 
 ### Daftar Menu (Dummy Data)
 
@@ -53,14 +58,25 @@ Splash → Sign Up → Register / Login → Home → Order (Alamat) → Konfirma
 
 - **Bahasa**: Kotlin
 - **IDE**: Android Studio
-- **UI**: XML Layout (ConstraintLayout)
+- **UI**: XML Layout (ConstraintLayout, LinearLayout, NestedScrollView)
 - **View Binding** untuk akses komponen UI
-- **RecyclerView** untuk daftar menu
-- **Material Components**
+- **RecyclerView** (grid 2 kolom) untuk daftar menu
+- **Material Components**, **ShapeableImageView**, dan drawable vector
 - **Min SDK**: API 27 (Android 8.1)
-- **Penyimpanan data**: dummy data & `object` di memori (tanpa database)
+- **Font**: Poppins
 - **SharedPreferences** untuk menyimpan akun pengguna
-- **ShapeableImageView** dan drawable vector untuk tampilan
+- **Data menu**: dummy data (tanpa database)
+
+## Struktur Project
+
+```
+app/src/main/java/lat/pam/kopidannyemil/
+├── adapter/        MenuAdapter
+├── data/           DummyData, Cart, UserSession, LastOrder
+├── model/          MenuItem
+└── *Activity.kt    Splash, SignUp, Login, Register,
+                    Home, Profile, Address, Confirmation
+```
 
 ## Cara Menjalankan Aplikasi
 
@@ -74,21 +90,46 @@ Splash → Sign Up → Register / Login → Home → Order (Alamat) → Konfirma
 5. Hubungkan HP Android (aktifkan USB Debugging) atau buat emulator di **Device Manager**.
 6. Klik tombol **Run ▶**.
 
+### Alur mencoba aplikasi
+
+**Pengguna baru**
+1. Tekan **Start now**, pilih **Register**, lalu isi nama lengkap, username, dan password.
+2. Setelah berhasil, kamu langsung masuk ke **Home**.
+
+**Pengguna yang sudah punya akun**
+1. Tekan **Start now**, pilih **Login**.
+2. Isi username dan password yang sudah didaftarkan, lalu tekan **Login**.
+
+**Memesan menu**
+1. Di **Home**, tambahkan menu dengan tombol **+**, lalu tekan bar hijau **Lihat pesanan**.
+2. Isi nama, alamat, dan patokan, pilih metode pembayaran, lalu tekan **Order dan Kirim**.
+3. Di layar konfirmasi, tekan **Oke** untuk kembali ke Home.
+
+**Profile**
+1. Buka tab **Profile** untuk mengubah nama.
+2. Tekan **Keluar dari akun** untuk logout, lalu masuk lagi lewat **Login**.
+
+> Akun tersimpan di perangkat, jadi setelah aplikasi ditutup kamu cukup masuk lewat **Login** dengan akun yang sama.
+
 ## Screenshot Aplikasi
 
 ### 1. Halaman Utama & Autentikasi
 | Splash / Welcome | Sign Up | Login User | Register |
 | :---: | :---: | :---: | :---: |
-| ![Splash](screenshots/splash.png) | ![Sign Up](screenshots/sign_up.png) | ![Login](screenshots/login_user.png) | ![Register](screenshots/register.png) |
+| <img src="screenshots/splash.png" width="180"> | <img src="screenshots/sign_up.png" width="180"> | <img src="screenshots/login_user.png" width="180"> | <img src="screenshots/register.png" width="180"> |
 
 ### 2. Menu Home, Profile, & Transaksi
 | Home (Atas & Bawah) | Profile | Alamat Pengiriman (Order) | Konfirmasi Pesanan |
 | :---: | :---: | :---: | :---: |
-| ![Home](screenshots/home1.png) ![Home](screenshots/home2.png) | ![Profile](screenshots/profile.png) | ![Order](screenshots/order1.png) ![Order](screenshots/order2.png) | ![Konfirmasi](screenshots/konfirmasi_pesanan.png) |
+| <img src="screenshots/home1.png" width="180"> <img src="screenshots/home2.png" width="180"> | <img src="screenshots/profile.png" width="180"> | <img src="screenshots/order1.png" width="180"> <img src="screenshots/order2.png" width="180"> | <img src="screenshots/konfirmasi_pesanan.png" width="180"> |
+
+## Catatan
+
+> Password disimpan sebagai teks biasa di SharedPreferences hanya untuk keperluan demo tugas. Data pesanan tidak disimpan permanen (tanpa database).
 
 ## Identitas
 
 - **Nama**: Faiz Muhammad Ilham
 - **NIM**: 1247050032
 - **Mata Kuliah**: Pengembangan Aplikasi Mobile
-- **Dosen Pengampu**: H.,Aldy Rialdy Atmadja,M.T 
+- **Dosen Pengampu**: H.Aldy Rialdy Atmadja, M.T. 
