@@ -8,16 +8,16 @@ Aplikasi mobile Android untuk memesan kopi dan makanan ringan, dibuat sebagai tu
 
 Kopi dan Nyemil adalah aplikasi pemesanan kopi dan camilan. Pengguna dapat mendaftar atau masuk, melihat daftar menu makanan dan minuman, mengubah nama profil, mengisi alamat pengiriman, lalu mengonfirmasi pesanan. Aplikasi tidak memakai database; data menu berupa data statis (dummy data) dan data pengguna disimpan sementara di memori selama aplikasi berjalan.
 
-| No | Layar | Deskripsi | Status |
-|----|-------|-----------|--------|
-| 1 | Splash / Welcome | Logo cangkir, animasi masuk, tagline, tombol "Start now" | ✅ |
-| 2 | Sign Up | Pilihan Register atau Login dengan kartu keunggulan | ✅ |
-| 3 | Login | Input username dan password, validasi, tampilkan/sembunyikan password | ✅ |
-| 4 | Register | Nama lengkap, username, password, konfirmasi password dengan validasi | ✅ |
-| 5 | Home | Sapaan nama depan, banner, pencarian, kategori, daftar 5 menu, tombol tambah ke keranjang | ✅ |
-| 6 | Profile | Ubah nama pengguna dan simpan | ✅ |
-| 7 | Alamat Pengiriman (Order) | Ringkasan pesanan, subtotal, ongkir, form alamat, metode pembayaran | ✅ |
-| 8 | Konfirmasi Pesanan | Nomor pesanan, pembayaran, total, alamat, tombol "Oke" ke Home | ✅ |
+| No | Layar | Deskripsi                                                                                 | Status |
+|----|-------|-------------------------------------------------------------------------------------------|--------|
+| 1 | Splash / Welcome | Logo cangkir, animasi masuk, tagline, tombol "Start now"                                  | ✅ |
+| 2 | Sign Up | Pilihan Register atau Login dengan kartu keunggulan                                       | ✅ |
+| 3 | Login | Input username dan password, validasi, tampilkan/sembunyikan password                     | ✅ |
+| 4 | Register | Nama lengkap, username, password, konfirmasi password dengan validasi                     | ✅ |
+| 5 | Home | Sapaan nama depan, banner, pencarian, kategori, daftar 8 menu, tombol tambah ke keranjang | ✅ |
+| 6 | Profile | Ubah nama pengguna dan simpan                                                             | ✅ |
+| 7 | Alamat Pengiriman (Order) | Ringkasan pesanan, subtotal, ongkir, form alamat, metode pembayaran                       | ✅ |
+| 8 | Konfirmasi Pesanan | Nomor pesanan, pembayaran, total, alamat, tombol "Oke" ke Home                            | ✅ |
 
 ### Fitur Tambahan
 
@@ -30,13 +30,17 @@ Kopi dan Nyemil adalah aplikasi pemesanan kopi dan camilan. Pengguna dapat menda
 
 ### Daftar Menu (Dummy Data)
 
-| Menu | Deskripsi | Harga |
-|------|-----------|-------|
+| Menu | Deskripsi | Harga     |
+|--|-----------|-----------|
 | Kopi Susu Gula Aren | Espresso, susu, gula aren | Rp 22.000 |
 | Donat Cokelat | Donat empuk, glaze cokelat | Rp 12.000 |
 | Sourdough Loaf | Roti fermentasi alami | Rp 35.000 |
 | Cappuccino | Espresso, foam susu lembut | Rp 25.000 |
 | Matcha Latte | Matcha Jepang, susu segar | Rp 27.000 |
+| Caramel Macchiato | Espresso, susu, sirup karamel | Rp 28.000 |
+| French Fries | Kentang goreng, dengan bumbu gurih | Rp 15.000 |
+| Lemon Tea | Teh segar dengan perasan jeruk lemon | Rp 18.000 |
+
 
 ### Alur Aplikasi
 
@@ -70,15 +74,17 @@ Splash → Sign Up → Register / Login → Home → Order (Alamat) → Konfirma
 5. Hubungkan HP Android (aktifkan USB Debugging) atau buat emulator di **Device Manager**.
 6. Klik tombol **Run ▶**.
 
-## Screenshot
+## Screenshot Aplikasi
 
-|  Splash / Welcome   | Sign Up |       Login User        | Register |
-|:-------------------:|:-------:|:-----------------------:|:--------:|
-| ![img.png](screenshots/splash.png) |    ![img_1.png](screenshots/sign_up.png)     | ![img_2.png](screenshots/login_user.png) |     ![img_3.png](screenshots/register.png)     |
+### 1. Halaman Utama & Autentikasi
+| Splash / Welcome | Sign Up | Login User | Register |
+| :---: | :---: | :---: | :---: |
+| ![Splash](screenshots/splash.png) | ![Sign Up](screenshots/sign_up.png) | ![Login](screenshots/login_user.png) | ![Register](screenshots/register.png) |
 
-|                             Home                              |               Profile               |                     Alamat Pengiriman (Order)                     |                Konfirmasi Pesanan                 |
-|:-------------------------------------------------------------:|:-----------------------------------:|:-----------------------------------------------------------------:|:-------------------------------------------------:|
-| ![Home](screenshots/home1.png) ![Home](screenshots/home2.png) | ![profile](screenshots/profile.png) | ![Order](screenshots/order1.png) ![Order](screenshots/order2.png) | ![Konfirmasi](screenshots/konfirmasi_pesanan.png) |
+### 2. Menu Home, Profile, & Transaksi
+| Home (Atas & Bawah) | Profile | Alamat Pengiriman (Order) | Konfirmasi Pesanan |
+| :---: | :---: | :---: | :---: |
+| ![Home](screenshots/home1.png) ![Home](screenshots/home2.png) | ![Profile](screenshots/profile.png) | ![Order](screenshots/order1.png) ![Order](screenshots/order2.png) | ![Konfirmasi](screenshots/konfirmasi_pesanan.png) |
 
 ## Identitas
 
