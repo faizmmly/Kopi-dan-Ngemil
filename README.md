@@ -72,13 +72,13 @@ Splash → Sign Up → Register / Login → Home → Order (Alamat) → Konfirma
 
 ## Screenshot
 
-| Splash | Sign Up | Login | Register |
-|:------:|:-------:|:-----:|:--------:|
-| _segera_ | _segera_ | _segera_ | _segera_ |
+|  Splash / Welcome   | Sign Up |       Login User        | Register |
+|:-------------------:|:-------:|:-----------------------:|:--------:|
+| ![img.png](img.png) |    ![img_1.png](img_1.png)     | ![img_2.png](img_2.png) |     ![img_3.png](img_3.png)     |
 
-| Home | Profile | Alamat | Konfirmasi |
-|:----:|:-------:|:------:|:----------:|
-| _segera_ | _segera_ | _segera_ | _segera_ |
+| Home | Profile | Alamat Pengiriman (Order) | Konfirmasi Pesanan |
+|:----:|:-------:|:-------------------------:|:------------------:|
+| _segera_ |    ![img_4.png](img_4.png)     |         _segera_          |      _segera_      |
 
 ## Identitas
 
