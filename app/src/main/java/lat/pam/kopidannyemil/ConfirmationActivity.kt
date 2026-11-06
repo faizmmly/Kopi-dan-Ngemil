@@ -40,6 +40,10 @@ class ConfirmationActivity : AppCompatActivity() {
 
         binding.btnOke.pressEffect()
 
+        binding.btnOke.setOnClickListener {
+            backToHome()
+        }
+
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 backToHome()
