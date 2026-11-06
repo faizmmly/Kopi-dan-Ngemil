@@ -97,13 +97,13 @@
                         android:textColorHint="@color/gray_text"
                         android:textSize="14sp" />
 
-                    <TextView
+                    <ImageView
                         android:layout_width="38dp"
                         android:layout_height="38dp"
                         android:background="@drawable/bg_chip_selected"
-                        android:gravity="center"
-                        android:text="🔍"
-                        android:textSize="15sp" />
+                        android:contentDescription="Cari"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_search" />
                 </LinearLayout>
 
                 <TextView
