@@ -272,6 +272,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:textSize="15sp"
                         android:checked="true"
                         android:text="Bayar di tempat (COD)"
                         android:textColor="@color/black" />
@@ -281,6 +285,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:textSize="15sp"
                         android:text="QRIS"
                         android:textColor="@color/black" />
 
@@ -293,7 +301,7 @@
                         android:paddingStart="8dp"
                         android:paddingTop="6dp"
                         android:paddingBottom="6dp"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
                         android:textColor="@color/black" />
                 </RadioGroup>
             </LinearLayout>

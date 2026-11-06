@@ -23,6 +23,19 @@ class AddressActivity : AppCompatActivity() {
         binding.etName.setText(UserSession.fullName)
         renderSummary()
 
+        val clearError = object : android.text.TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, st: Int, c: Int, a: Int) {}
+            override fun onTextChanged(s: CharSequence?, st: Int, b: Int, c: Int) {
+                binding.tilName.error = null
+                binding.tilAddress.error = null
+                binding.tilDetail.error = null
+            }
+            override fun afterTextChanged(s: android.text.Editable?) {}
+        }
+        binding.etName.addTextChangedListener(clearError)
+        binding.etAddress.addTextChangedListener(clearError)
+        binding.etDetail.addTextChangedListener(clearError)
+
         binding.btnOrder.setOnClickListener {
             if (Cart.totalCount() == 0) finish() else doOrder()
         }
