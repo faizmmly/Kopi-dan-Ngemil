@@ -9,7 +9,7 @@ Aplikasi mobile Android untuk memesan kopi dan makanan ringan, dibuat sebagai tu
 
 ## Deskripsi Aplikasi
 
-Kopi dan Nyemil adalah aplikasi pemesanan kopi dan camilan. Pengguna dapat mendaftar atau masuk, melihat daftar menu makanan dan minuman, menambahkan menu ke keranjang,  menambahkan menu ke keranjang, mengisi alamat pengiriman, memilih metode pembayaran, lalu menerima konfirmasi pesanan. Aplikasi **tidak memakai database**: data menu berupa data statis (dummy data) dan data akun disimpan di perangkat dengan SharedPreferences.
+Kopi dan Nyemil adalah aplikasi pemesanan kopi dan camilan. Pengguna dapat mendaftar atau masuk, melihat daftar menu makanan dan minuman, menambahkan menu ke keranjang, mengisi alamat pengiriman, memilih metode pembayaran, lalu menerima konfirmasi pesanan. Aplikasi **tidak memakai database**: data menu berupa data statis (dummy data) dan data akun disimpan di perangkat dengan SharedPreferences.
 
 | No | Layar | Deskripsi                                                                                 | Status |
 |----|-------|-------------------------------------------------------------------------------------------|--------|
