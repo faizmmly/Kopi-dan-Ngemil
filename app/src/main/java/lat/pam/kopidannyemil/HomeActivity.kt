@@ -6,12 +6,14 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
-import androidx.recyclerview.widget.LinearLayoutManager
 import lat.pam.kopidannyemil.adapter.MenuAdapter
 import lat.pam.kopidannyemil.data.Cart
-import lat.pam.kopidannyemil.data.DummyData
 import lat.pam.kopidannyemil.data.UserSession
 import lat.pam.kopidannyemil.databinding.ActivityHomeBinding
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
+import kotlinx.coroutines.launch
+import lat.pam.kopidannyemil.data.FoodRepository
 
 class HomeActivity : AppCompatActivity() {
 
@@ -24,9 +26,15 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        adapter = MenuAdapter(DummyData.menuList) { updateCartBar() }
-        binding.rvMenu.layoutManager = androidx.recyclerview.widget.GridLayoutManager(this, 2)
+        adapter = MenuAdapter(emptyList()) { updateCartBar() }
+        binding.rvMenu.layoutManager = GridLayoutManager(this, 2)
         binding.rvMenu.adapter = adapter
+
+        lifecycleScope.launch {
+            val items = FoodRepository(applicationContext).getMenu()
+            adapter.setData(items)
+            applyFilter()
+        }
 
         binding.etSearch.doOnTextChanged { _, _, _, _ -> applyFilter() }
 

@@ -9,11 +9,17 @@ import lat.pam.kopidannyemil.databinding.ItemMenuBinding
 import lat.pam.kopidannyemil.model.MenuItem
 
 class MenuAdapter(
-    private val allItems: List<MenuItem>,
+    private var allItems: List<MenuItem>,
     private val onCartChanged: () -> Unit
 ) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 
     private var shown: List<MenuItem> = allItems
+
+    fun setData(items: List<MenuItem>) {
+        allItems = items
+        shown = items
+        notifyDataSetChanged()
+    }
 
     class MenuViewHolder(val binding: ItemMenuBinding) : RecyclerView.ViewHolder(binding.root)
 
